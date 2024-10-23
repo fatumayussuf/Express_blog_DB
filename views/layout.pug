@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/output.css")
+        title Document
+    body 
+       // Header
+    .header.flex.items-center.justify-between.bg-black.p-4.shadow-md
+      // Logo
+      img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d7bF1q2WBQnHUhqaR2OuxjFiv_EIWBwqow&s", alt="Logo", class="w-12 h-12 mr-3")
+
+      
+
+      // Navigation
+      nav
+        ul.flex.space-x-6
+          li
+            a(href="#", class="text-white hover:text-gray-900 font-medium") Home
+          li
+            a(href="#", class="text-white hover:text-gray-900 font-medium") Join Us
+          li
+            a(href="#", class="text-white hover:text-gray-900 font-medium") customer care 
+
+          li
+            a(href="#", class="text-white hover:text-gray-900 font-medium") Reach out 
+
+          li
+            a(href="#", class="text-white hover:text-gray-900 font-medium") About us 
+
+
+      // Subscribe Button
+      a(href="/subscribe", class="bg-red-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-red-600 transition-colors duration-300") Subscribe
+
+    block content
+
+    // Footer
+    footer(class="w-full flex justify-center py-4 bg-gray-200")
+      p Copyright &copy; #{new Date().getFullYear()}

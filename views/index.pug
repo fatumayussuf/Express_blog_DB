@@ -1,0 +1,25 @@
+
+extends layout
+
+block content
+    main(class="my-8 ")
+        
+            // Grid layout that adjusts for small and large screens
+            div(class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ')
+                each blog in blogs
+                    article(class="bg-white rounded-lg shadow-md overflow-hidden")
+                        img(src=blog.image, alt="Article Image", class="w-full h-72 object-cover") 
+                        div(class="p-4")
+                            h2(class="text-xl font-bold mb-2 text-gray-900 hover:text-blue-500 transition-colors duration-300")= blog.title
+                            p(class="text-gray-600 mb-1 text-sm")=blog.content
+                            p(class="text-gray-500 text-sm mb-2") 4 min read
+                            
+                            //- Author Section
+                            div(class="flex items-center mt-4")
+                                img(src=blog.author_image, alt="Author", class="w-10 h-10 rounded-full mr-3 shadow-lg")
+                                p(class="text-gray-800 font-medium")= blog.author_name
+
+                            //- Like and Dislike Buttons
+                            div(class="flex justify-between space-x-4 mt-4")
+                                button(class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition ease-in-out duration-300 shadow-md") Like
+                                button(class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 transition ease-in-out duration-300 shadow-md") Dislike

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    main(class="mt-8 lg:mt-36 px-6 lg:px-0 md:max-w-sm lg:max-w-4xl mx-auto text-gray-800")
+        h1(class="font-semibold text-2xl lg:text-4xl mb-6") Create New Blog Post   
+        form(action="/new_post", method="post", class="grid gap-4 p-6 bg-gray-50 rounded-md shadow-md")
+            div
+                label(for="title", class="font-medium text-gray-700") Title 
+                input(type="text", name="title", id="title", class="w-full block px-4 py-2 mt-2 rounded-md focus:outline-none focus:border-none focus:ring-2 focus:ring-orange-500 transition ease-in-out duration-300")
+            div
+                label(for="content", class="font-medium text-gray-700") Content 
+                textarea(name="content", id="content", class="w-full block px-4 py-2 mt-2 rounded-md focus:outline-none focus:border-none focus:ring-2 focus:ring-orange-500 transition ease-in-out duration-300" rows="5")
+            div
+                label(for="image", class="font-medium text-gray-700") Image Poster 
+                input(type="text", name="image", id="image", class="w-full block px-4 py-2 mt-2 rounded-md focus:outline-none focus:border-none focus:ring-2 focus:ring-orange-500 transition ease-in-out duration-300")
+            div
+                label(for="author-name", class="font-medium text-gray-700") Author Name 
+                input(type="text", name="author-name", id="author-name", class="w-full block px-4 py-2 mt-2 rounded-md focus:outline-none focus:border-none focus:ring-2 focus:ring-orange-500 transition ease-in-out duration-300")
+            div
+                label(for="author-image", class="font-medium text-gray-700") Author Image 
+                input(type="text", name="author-image", id="author-image", class="w-full block px-4 py-2 mt-2 rounded-md focus:outline-none focus:border-none focus:ring-2 focus:ring-orange-500 transition ease-in-out duration-300")
+
+            button(type="submit", class="bg-green-700 hover:bg-green-600 text-white px-6 py-3 rounded-lg transition ease-in-out duration-300 mt-4") Create Post
